@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Responsive Form</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      input {
+          border-color: cadetblue;
+          display: block;
+          
+      }
+      .feedback-input{
+            color:#3c3c3c;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight:500;
+            font-size: 18px;
+            border-radius: 0;
+            line-height: 22px;
+            background-color: #fbfbfb;
+            padding: 13px 13px 13px 54px;
+            margin-bottom: 10px;
+            width:100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 3px solid rgba(0,0,0,0);
+      }
+      .content {
+            float:left;
+            padding-top:0px;
+            margin: 20px auto;
+            width: 80%;
+            text-align: center;
+            box-shadow: 0 2px 3px rgb(164, 214, 117);
+            border: 1px solid rgb(63, 95, 155);
+            padding: 10px;
+            box-sizing: border-box;
+            align-content: center;
+            position: absolute;
+            background-color:rgba(71, 172, 163, 0.4);
+            border-radius: 2px;
+            -moz-border-radius: 7px;
+            -webkit-border-radius: 7px;
+        }
+         .btn {
+                font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                float:center;
+                width: auto;
+                justify-self: center;
+                border: #fbfbfb solid 2px;
+                cursor:pointer;
+                background-color: #3e8d73;
+                color:white;
+                font-size:16px;
+                padding-top:11px;
+                padding-bottom:11px;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                transition: all 0.3s;
+                margin-top:-2px;
+                font-weight:350;
+        }
+           
+        @media (min-width: 600px) {
+            .content {
+                width: 500px;
+            }
+            .form-div {
+                left: 3%;
+                margin-right: 3%;
+                width: 88%;
+                margin-left: 0;
+                padding-left: 3%;
+                padding-right: 3%;
+	        
+            }
+        }
+        .name {
+            background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+            background-size: 30px 30px;
+            background-position: 11px 8px;
+            background-repeat: no-repeat;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            line-height: 150%;
+            resize:vertical;
+        }
+        .email{
+            background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+            background-size: 30px 30px;
+            background-position: 11px 8px;
+            background-repeat: no-repeat;
+        }
+        .message{
+            background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+            background-size: 30px 30px;
+            background-position: 11px 8px;
+            background-repeat: no-repeat;
+
+        }
+        .submit:hover .ease{
+            width:100%;
+            background-color:white;
+        }
+        .ease {
+            width: 0px;
+            height: 74px;
+            background-color: #fbfbfb;
+            -webkit-transition: .3s ease;
+            -moz-transition: .3s ease;
+            -o-transition: .3s ease;
+            -ms-transition: .3s ease;
+            transition: .3s ease;
+        }
+    </style>
+    
+    </head>
+<body>
+
+<div class="content">
+    <div>
+        <form>
+            <p class="name" ><input type="text" class="feedback-input name" placeholder="Ibrahim Nayaya Bashir"></p>
+            <p class="email"><input type="email" class="feedback-input email" placeholder="nayaya@gmail.com"></p>
+            <p class="name"><input type="text" class="feedback-input name" placeholder="Internship"></p>
+            <textarea name="text" class="validate[required,length[6,300]] feedback-input message" placeholder="Your Message Here"></textarea>
+            <div class="submit"><input class="btn" type="submit" name="name" value="Submit"></div>
+            <div class="ease"></div>
+         </form>
+    </div>
+</div>
+    
+</body>
+</html>
