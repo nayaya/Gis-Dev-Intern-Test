@@ -1,0 +1,31 @@
+1. The sql query in the 'understand.sql' file is a selection query that returns all records in 
+   the runners table whose id field is not in the winner-id column returned by the sub-query in 
+   the parentheses. and it sort the records acoording to the names in ascending order.
+
+2. With the schema in question, Emp table has 10 records (rows), Dept table has 5 records(rows), 
+   hence, executing this query "SELECT * FROM Emp, Dept" will perform a full join of both tables
+   and the result will contain 50 rows.
+
+3. The following sql statement can swap the Sex column values in the Salaries Table:
+     "UPDATE Salaries SET Sex = (case 
+    -                             when Sex='m' then 'f' 
+                                  when Sex='f' then 'm'
+                                 end) WHERE Sex IN ('m', 'f');"
+
+4. The intent is to return the list of customers not referred by Jane Smith alone. Hence,
+    executing this query "SELECT Name FROM Customers WHERE ReferredBy <> 2;" will return this
+     table:
+
+    | Name          |
+    | ------------- | 
+    | John Doe      | 
+    | Jane Smith    | 
+    | Eric Branford | 
+    | Pat Richards  | 
+
+  Because, the query is written such that it checks for the "ReferredBy" column for all values 
+  not equal to 2. so, John Smith is also returned, however, it isn't logical to return him in the
+  table. 
+  The query can be optimized to check not only the ReferredBy column but also the id table to ascertain that 
+  John Smith is not in the resulting table thus;
+       "SELECT Name FROM Customers WHERE ReferredBy <> 2 AND id <> 2"
