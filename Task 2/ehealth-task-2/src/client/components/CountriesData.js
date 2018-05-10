@@ -16,7 +16,11 @@ class CountriesData extends Component {
     componentDidMount () {
         axios.get('https://restcountries.eu/rest/v2/region/africa')
             .then(res => {
-                const fetchedData = [{name: "NAME",capital: "CAPITAL", population: "POPULATION", timezones: ["TIMEZONE"]}];
+                const fetchedData = [{name: "NAME",
+                                      capital: "CAPITAL", 
+                                      population: "POPULATION", 
+                                      timezones: ["TIMEZONE"]}
+                                    ];
                 for (let key in res.data) {
                     fetchedData.push(
                         res.data[key]

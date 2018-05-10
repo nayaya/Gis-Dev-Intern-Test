@@ -5,7 +5,7 @@ const showMap = (props) => {
     let countries = props.data;    
     return (   
         <div>
-         <table>
+         <table className="container">
           
         {    
             countries.map(ctry => {
@@ -13,6 +13,9 @@ const showMap = (props) => {
                 switch(ctry.timezones[0]){
                     case "UTC":
                     time = <td className="blue">{ctry.timezones[0]}</td>;
+                    break;
+                    case "TIMEZONE":
+                    time = <td>{ctry.timezones[0]}</td>;
                     break;
                     case "UTC-1:00":
                     time = <td className="cyan">{ctry.timezones[0]}</td>;
